@@ -8,16 +8,14 @@ public class CalculadoraHileras {
 
 		try {
 			String[] listNumbers = numbers.split(",");
+			int result = 0;
 			
-			if (listNumbers.length > 2)
-				throw new Exception("Error > 3");
+			for (String numbString : listNumbers) {
+				int number = Integer.parseInt(numbString);
+				result = result + number;
+			}
 			
-			int number1 = Integer.parseInt(listNumbers[0]);
-			int number2 = 0;
-			if (listNumbers.length == 2)
-				number2 = Integer.parseInt(listNumbers[1]);
-			
-			return number1 + number2;
+			return result;
 		} catch (Exception e) {
 			throw new Exception("Error" + e);
 		}

@@ -26,6 +26,14 @@ class TestCalculadoraHileras {
 	}
 	
 	@Test
+	public void testReturnSumaMasDos() throws Exception {
+		String numbers = "1,3,1,2";
+		int result = CalculadoraHileras.Add(numbers);
+		
+		assertEquals(7, result, "Should return 7 as number");
+	}
+	
+	@Test
 	public void testReturnCero() throws Exception {
 		String numbers = "";
 		int result = CalculadoraHileras.Add(numbers);
@@ -33,7 +41,7 @@ class TestCalculadoraHileras {
 		assertEquals(0, result, "Should return 0 as number");
 	}
 	
-	@Test
+	/*@Test
 	public void testReturnErrorMasTres() {
 		String numbers = "1,3,1";
 		
@@ -44,7 +52,7 @@ class TestCalculadoraHileras {
 	   catch(Exception e) {
 		   assertTrue(true);
 	   }
-	}
+	}*/
 	
 	@Test
 	public void testReturnErrorSinComas() {
