@@ -54,4 +54,13 @@ public class TestFooBarQix {
 		assertEquals("QIX", result2, "Should return 'QIX'");
 	}
 	
+	@Test
+	public void testDivisibleByMore() {
+		int number1 = 15;
+		
+		String result1 = FooBarQix.process(number1);
+		
+		assertEquals("FOOBAR", result1, "Should return 'FOOBAR'");
+	}
+	
 }
